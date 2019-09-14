@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CrystalsCollector Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- <img src="assets/images/blue-bg.jpg" class="card-img" alt="backround">
+            <div class="card-img-overlay"> -->
+    <div class="jumbotron jumbotron-fluid p-3 mb-2 bg-info text-dark">
+        <div class="container">
+            <h1 class="display-5">Crystals Collector!!</h1>
+            <p class="lead">Counts with me!!!</p>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="card border">
+                <div class="card-body bg-secondary border">
+                    <h5 class="card-title text-center bg-secondary">Game Instractions</h5>
+                    <ul class="card-text bg-secondary">
+                        <li>There will be four crystals displayed as buttons on the page.</li>
+                        <li>The player will be shown a random number at the start of the game.</li>
+                        <li> When the player clicks on a crystal, it will add a specific amount of points to the
+                            player's total score.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 bg-danger">
+            <h3 id="numberToGuess">number:</h3>
+        </div>
+        <div class="col-3 bg-info">
+            <div class="row ">
+                <div class="col-2">
+                    <h3>Win:</h3>
+                </div>
+                <h3 class="col-2" id="userWin"></h3>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h3>Lose:</h3>
+                </div>
+                <h3 class="col-2" id="userLose"></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 ml-1">
+                <img src="assets/images/blue.jpg" width="200px" height="121px" alt="crystal" class="img-thumbnail">
+            </div>
+            <div class="col-2 ml-1">
+                <img src="assets/images/pink.jpg" width="200px" height="121px" alt="crystal" class="img-thumbnail">
+            </div>
+            <div class="col-2 ml-1">
+                <img src="assets/images/pruple.jpg" width="200px" height="121px" alt="crystal" class="img-thumbnail">
+            </div>
+            <div class="col-2 ml-1">
+                <img src="assets/images/red.jpg" width="200px" height="121px" alt="crystal" class="img-thumbnail">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-2 bg-secondary">
+                <h3 id="totalToGet">Your total score is:</h3>
+            </div>
+        </div>
+            <div class="row mt-2">
+                    <div class="col-2 bg-secondary">
+                        <h3 id="">0:</h3>
+                    </div>
+                   
+                </div>
+    <script src="assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

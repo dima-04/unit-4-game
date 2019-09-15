@@ -3,31 +3,41 @@ var lose = 0;
 var total = 0;
 var number = 0;
 
-var userLoseH3 = document.$("userLose");
-var userWinH3 = document.$("userWin");
-var numberToGuessH3 = document.$("numberToGuess");
+var userLoseH3 = $("#userLose");
+var userWinH3 = $("#userWin");
+var numberToGuessH3 = $("#numberToGuess");
+var totalToGet = $("#totalToGet");
 
-function startGame(){
-    number = 19 + [Math.floor(Math.random() * [0 , 101])];
-    for (var i = 0; i < number.length; i++) {
-     console.log(i);
-    }
+function startGame() {
+    number = 19 + Math.floor(Math.random() * 101);
+    diamoundBlue = 1 + Math.floor(Math.random() * 11);
+    diamoundPink = 1 + Math.floor(Math.random() * 11);
+    dimoundPruple = 1 + Math.floor(Math.random() * 11);
+    diamoundRed = 1 + Math.floor(Math.random() * 11);
 }
-            
 
 function updateUI() {
-    userLoseH3.innerHTML = lose;
-    userWinH3.innerHTML = win;
+    userLoseH3.text(lose);
+    userWinH3.text(win);
+    numberToGuessH3.text(number);
+    totalToGet.text(total);
 }
-$(".blue-image").on("click" , function(){
+startGame();
+updateUI();
 
+$("#blue").on("click", function () {
+    total += diamoundBlue;
+    updateUI();
 });
-$(".pink-image").on("click" , function(){
-
+$("#pink").on("click", function () {
+    total += diamoundPink;
+    updateUI();
 });
-$(".pruple-image").on("click" , function(){
-
+$("#pruple").on("click", function () {
+    total += dimoundPruple;
+    updateUI();
 });
-$(".red-image").on("click" , function(){
-
+$("#red").on("click", function () {
+    total += diamoundRed;
+    updateUI();
 });

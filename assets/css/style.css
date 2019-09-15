@@ -9,3 +9,8 @@
     height: 100%;
     margin-left: -161px;
 }
+.backround-pic{
+    background-image: url(blue-bg.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}

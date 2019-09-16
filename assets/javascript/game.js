@@ -27,17 +27,53 @@ updateUI();
 
 $("#blue").on("click", function () {
     total += diamoundBlue;
+    if(total===number){
+        win++;
+        startGame();
+    }
+    if(total>number){
+        lose++;
+        startGame();
+    }
+   
     updateUI();
 });
 $("#pink").on("click", function () {
     total += diamoundPink;
+    if(total===number){
+        win++;
+        startGame();
+    }
+    if(total>number){
+        lose++;
+        startGame();
+    }
+  
     updateUI();
 });
 $("#pruple").on("click", function () {
     total += dimoundPruple;
+    if(total===number){
+        win++;
+        startGame();
+    }
+    if(total>number){
+        lose++;
+        startGame();
+    }
+   
     updateUI();
 });
 $("#red").on("click", function () {
     total += diamoundRed;
+    if(total===number){
+        win++;
+        startGame();
+    }
+    if(total>number){
+        lose++;
+        startGame();
+    }
+  
     updateUI();
 });

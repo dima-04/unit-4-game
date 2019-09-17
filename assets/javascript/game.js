@@ -2,6 +2,10 @@ var win = 0;
 var lose = 0;
 var total = 0;
 var number = 0;
+var diamoundBlue;
+var diamoundPink;
+var dimoundPruple;
+var diamoundRed;
 
 var userLoseH3 = $("#userLose");
 var userWinH3 = $("#userWin");
@@ -9,6 +13,7 @@ var numberToGuessH3 = $("#numberToGuess");
 var totalToGet = $("#totalToGet");
 
 function startGame() {
+    total = 0;
     number = 19 + Math.floor(Math.random() * 101);
     diamoundBlue = 1 + Math.floor(Math.random() * 11);
     diamoundPink = 1 + Math.floor(Math.random() * 11);
@@ -22,58 +27,34 @@ function updateUI() {
     numberToGuessH3.text(number);
     totalToGet.text(total);
 }
+
+function diamoundClick(score) {
+    total += score;
+    if (total === number) {
+        win++;
+        startGame();
+    }
+    if (total > number) {
+        lose++;
+        startGame();
+    }
+    updateUI();
+
+}
+
 startGame();
 updateUI();
 
 $("#blue").on("click", function () {
-    total += diamoundBlue;
-    if(total===number){
-        win++;
-        startGame();
-    }
-    if(total>number){
-        lose++;
-        startGame();
-    }
-   
-    updateUI();
+    diamoundClick(diamoundBlue);
 });
 $("#pink").on("click", function () {
-    total += diamoundPink;
-    if(total===number){
-        win++;
-        startGame();
-    }
-    if(total>number){
-        lose++;
-        startGame();
-    }
-  
-    updateUI();
+    diamoundClick(diamoundPink);
+
 });
 $("#pruple").on("click", function () {
-    total += dimoundPruple;
-    if(total===number){
-        win++;
-        startGame();
-    }
-    if(total>number){
-        lose++;
-        startGame();
-    }
-   
-    updateUI();
+    diamoundClick(dimoundPruple);
 });
 $("#red").on("click", function () {
-    total += diamoundRed;
-    if(total===number){
-        win++;
-        startGame();
-    }
-    if(total>number){
-        lose++;
-        startGame();
-    }
-  
-    updateUI();
+    diamoundClick(diamoundRed);
 });

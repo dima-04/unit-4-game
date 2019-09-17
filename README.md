@@ -1,7 +1,7 @@
 # CrystalsCollector Game
 
-### The player will have to guess number.
-#### the game istrction:
+## The player will have to guess number.
+### The game instrction:
 
 * There will be four crystals displayed as buttons on the page.
 * The player will be shown a random number at the start of the game.
